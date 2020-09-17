@@ -90,7 +90,7 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
             etd.setText("math");
         }
         etx1.setText(editNumbers(x1));
-        etn.setText(editNumbers(n));
+        etn.setText(editNumbers(pos+1));
         Sn.setText(editNumbers(summery));
 
     }
