@@ -9,7 +9,7 @@
     <Space
         android:layout_width="0px"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="2" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -70,6 +70,7 @@
             android:text="n" />
 
         <EditText
+            android:id="@+id/etn"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="2
@@ -89,6 +90,8 @@
             android:text="d" />
 
         <EditText
+
+            android:id="@+id/etd"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="2"
@@ -102,8 +105,22 @@
 
     </LinearLayout>
 
-    <Space
+    <LinearLayout
         android:layout_width="0px"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="7" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:onClick="results"
+            android:layout_weight="1"
+            android:text="results" />
+    </LinearLayout>
 </LinearLayout>
