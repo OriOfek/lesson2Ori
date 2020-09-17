@@ -87,7 +87,7 @@
             android:layout_height="0px"
             android:layout_weight="1"
             android:ems="25"
-            android:text="d" />
+            android:text="x1" />
 
         <EditText
 

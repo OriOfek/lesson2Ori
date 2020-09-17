@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     public void results(View view) {
         si = new Intent(this,results.class);
         si.putExtra("type",s.isChecked());
-        si.putExtra("d",etd.getText());
-        si.putExtra("n",etn.getText());
+        si.putExtra("x1",etd.getText().toString());
+        si.putExtra("n",etn.getText().toString());
         startActivity(si);
     }
 }
