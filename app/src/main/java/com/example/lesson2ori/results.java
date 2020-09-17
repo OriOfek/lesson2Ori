@@ -54,9 +54,11 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
                 arr[i-1] = editNumbers(x1 + (i-1)*n);
             }
         }
+
         ArrayAdapter<String> adp = new ArrayAdapter<String>(this
                 ,R.layout.support_simple_spinner_dropdown_item,arr);
         ls.setAdapter(adp);
+        ls.setOnItemClickListener(this);
     }
 
     private  String editNumbers(float number)
@@ -73,7 +75,23 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int pos, long is) {
-
+        float summery = 0;
+        
+        for(int i = 0; i < pos; i++)
+        {
+            summery += Float.valueOf(arr[i]);
+        }
+        if(type)
+        {
+            etd.setText("geo");
+        }
+        else
+        {
+            etd.setText("math");
+        }
+        etx1.setText(editNumbers(x1));
+        etn.setText(editNumbers(n));
+        Sn.setText(editNumbers(summery));
 
     }
 
