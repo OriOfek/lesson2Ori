@@ -19,7 +19,7 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
     Intent gi;
     String[] arr;
     float x1;
-    float n;
+    float d;
     boolean type; // 0 geo 1 math
     ListView ls;
 
@@ -37,21 +37,21 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
 
         gi = getIntent();
         x1 = Float.valueOf(gi.getStringExtra("x1"));
-        n = Float.valueOf(gi.getStringExtra("n"));
+        d = Float.valueOf(gi.getStringExtra("n"));
         type = gi.getBooleanExtra("type",true);
 
         if(type)
         {
             for (int i = 1; i <= 20; i++)
             {
-                arr[i-1] = editNumbers(x1 * (float)Math.pow((double)n,(double)(i-1)));
+                arr[i-1] = editNumbers(x1 * (float)Math.pow((double)d,(double)(i-1)));
             }
         }
         else
         {
             for (int i = 1; i <= 20; i++)
             {
-                arr[i-1] = editNumbers(x1 + (i-1)*n);
+                arr[i-1] = editNumbers(x1 + (i-1)*d);
             }
         }
 
@@ -81,14 +81,10 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
         {
             summery += Float.valueOf(arr[i]);
         }
-        if(type)
-        {
-            etd.setText("geo");
-        }
-        else
-        {
-            etd.setText("math");
-        }
+
+
+        etd.setText(editNumbers(d));
+
         etx1.setText(editNumbers(x1));
         etn.setText(editNumbers(pos+1));
         Sn.setText(editNumbers(summery));

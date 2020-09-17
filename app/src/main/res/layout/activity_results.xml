@@ -34,7 +34,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="30"
-                android:text="n=" />
+                android:text="x1=" />
 
             <Space
                 android:layout_width="0dp"
@@ -42,7 +42,7 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/n"
+                android:id="@+id/x1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
@@ -94,7 +94,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="30"
-                android:text="x1=" />
+                android:text="n=" />
 
             <Space
                 android:layout_width="0dp"
@@ -102,7 +102,7 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/x1"
+                android:id="@+id/n"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />

@@ -66,8 +66,8 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:ems="25"
-            android:text="n" />
+            android:ems="40"
+            android:text="d" />
 
         <EditText
             android:id="@+id/etn"
@@ -86,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:ems="25"
+            android:ems="40"
             android:text="x1" />
 
         <EditText
