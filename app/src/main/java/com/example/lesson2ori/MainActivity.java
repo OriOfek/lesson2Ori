@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Switch s;
@@ -24,10 +25,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void results(View view) {
-        si = new Intent(this,results.class);
-        si.putExtra("type",s.isChecked());
-        si.putExtra("x1",etd.getText().toString());
-        si.putExtra("n",etn.getText().toString());
-        startActivity(si);
+        if(check())
+        {
+            si = new Intent(this,results.class);
+            si.putExtra("type",s.isChecked());
+            si.putExtra("x1",etd.getText().toString());
+            si.putExtra("n",etn.getText().toString());
+            startActivity(si);
+        }
+        
+    }
+
+    private boolean check() {
+        boolean flag = true;
+        if(etd.getText().toString().equals("") || etd.getText().toString().equals("-") || etd.getText().toString().equals("."))
+        {
+            flag = false;
+            Toast.makeText(this, "there is no d",
+                    Toast.LENGTH_LONG).show();
+        }
+        if(etn.getText().toString().equals("") || etn.getText().toString().equals("-") || etn.getText().toString().equals("."))
+        {
+            flag = false;
+            Toast.makeText(this, "there is no n",
+                    Toast.LENGTH_LONG).show();
+        }
+        return flag;
     }
 }
