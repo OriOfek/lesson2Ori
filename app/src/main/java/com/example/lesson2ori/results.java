@@ -58,10 +58,15 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
         ArrayAdapter<String> adp = new ArrayAdapter<String>(this
                 ,R.layout.support_simple_spinner_dropdown_item,arr);
         ls.setAdapter(adp);
+
         ls.setOnItemClickListener(this);
+
+        etd.setText(editNumbers(d));
+
+        etx1.setText(editNumbers(x1));
     }
 
-    private  String editNumbers(float number)
+    private String editNumbers(float number)
     {
         if(Float.isNaN(number)) {
             return ("no solution");
@@ -77,15 +82,11 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
     public void onItemClick(AdapterView<?> adapterView, View view, int pos, long is) {
         float summery = 0;
         
-        for(int i = 0; i < pos; i++)
+        for(int i = 0; i <= pos; i++)
         {
             summery += Float.valueOf(arr[i]);
         }
 
-
-        etd.setText(editNumbers(d));
-
-        etx1.setText(editNumbers(x1));
         etn.setText(editNumbers(pos+1));
         Sn.setText(editNumbers(summery));
 
