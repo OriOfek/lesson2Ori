@@ -31,29 +31,32 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.2"
+                android:gravity="center"
                 android:text="math" />
 
             <Space
                 android:layout_width="0px"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="0.1" />
 
             <Switch
                 android:id="@+id/sw"
-                android:layout_width="0px"
+                android:layout_width="34dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="0.5"
+                android:gravity="center" />
 
             <Space
                 android:layout_width="0px"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="0.1" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="0px"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.2"
+                android:gravity="center"
                 android:text="geo" />
         </LinearLayout>
 
@@ -71,7 +74,7 @@
             android:gravity="center_horizontal"
             android:text="d"
             android:textColor="#FF0000"
-            android:textSize="36sp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/etn"
@@ -94,7 +97,7 @@
             android:gravity="center_horizontal"
             android:text="x1"
             android:textColor="#2600FF"
-            android:textSize="36sp" />
+            android:textSize="24sp" />
 
         <EditText
 

@@ -17,6 +17,7 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
     TextView etd;
     TextView Sn;
     Intent gi;
+    float[] sn;
     String[] arr;
     float x1;
     float d;
@@ -29,6 +30,7 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
         setContentView(R.layout.activity_results);
 
         arr = new String[20];
+        sn = new float[20];
         ls = (ListView)findViewById(R.id.ls);
         etx1 = (TextView)findViewById(R.id.x1);
         etn = (TextView)findViewById(R.id.n);
@@ -45,6 +47,14 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
             for (int i = 1; i <= 20; i++)
             {
                 arr[i-1] = editNumbers(x1 * (float)Math.pow((double)d,(double)(i-1)));
+                if(i == 1)
+                {
+                    sn[i-1] = Float.parseFloat(arr[i-1]);
+                }
+                else
+                {
+                    sn[i-1] = Float.parseFloat(arr[i-1]) + Float.parseFloat(arr[i-2]);
+                }
             }
         }
         else
@@ -52,6 +62,15 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
             for (int i = 1; i <= 20; i++)
             {
                 arr[i-1] = editNumbers(x1 + (i-1)*d);
+                if(i == 1)
+                {
+                    sn[i-1] = Float.parseFloat(arr[i-1]);
+                }
+                else
+                {
+                    sn[i-1] = Float.parseFloat(arr[i-1]) + Float.parseFloat(arr[i-2]);
+                }
+
             }
         }
 
@@ -68,6 +87,7 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
 
     private String editNumbers(float number)
     {
+
         if(Float.isNaN(number)) {
             return ("no solution");
         }
@@ -80,15 +100,8 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int pos, long is) {
-        float summery = 0;
-        
-        for(int i = 0; i <= pos; i++)
-        {
-            summery += Float.valueOf(arr[i]);
-        }
-
         etn.setText(editNumbers(pos+1));
-        Sn.setText(editNumbers(summery));
+        Sn.setText(editNumbers(sn[pos]));
 
     }
 

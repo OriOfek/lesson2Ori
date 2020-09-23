@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean check() {
         boolean flag = true;
-        if(etd.getText().toString().equals("") || etd.getText().toString().equals("-") || etd.getText().toString().equals("."))
+        if(etd.getText().toString().equals("") || etd.getText().toString().equals("-") || etd.getText().toString().equals(".")|| etd.getText().toString().equals("-."))
         {
             flag = false;
             Toast.makeText(this, "there is no d",
                     Toast.LENGTH_LONG).show();
         }
-        if(etn.getText().toString().equals("") || etn.getText().toString().equals("-") || etn.getText().toString().equals("."))
+        if(etd.getText().toString().equals("") || etd.getText().toString().equals("-") || etd.getText().toString().equals(".")|| etd.getText().toString().equals("-."))
         {
             flag = false;
             Toast.makeText(this, "there is no n",

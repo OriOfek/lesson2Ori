@@ -33,19 +33,22 @@
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="30"
-                android:text="x1=" />
+                android:ems="55"
+                android:text="x1="
+                android:textSize="24sp" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="0.2" />
 
             <TextView
                 android:id="@+id/x1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:ems="55"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <Space
@@ -63,19 +66,22 @@
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="30"
-                android:text="d=" />
+                android:ems="55"
+                android:text="d="
+                android:textSize="24sp" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="0.2" />
 
             <TextView
                 android:id="@+id/d"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:ems="55"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <Space
@@ -93,19 +99,22 @@
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="30"
-                android:text="n=" />
+                android:ems="55"
+                android:text="n="
+                android:textSize="24sp" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="0.2" />
 
             <TextView
                 android:id="@+id/n"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:ems="55"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <Space
@@ -124,19 +133,22 @@
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:ems="30"
-                android:text="Sn=" />
+                android:ems="55"
+                android:text="Sn="
+                android:textSize="24sp" />
 
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="0.2" />
 
             <TextView
                 android:id="@+id/Sn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:ems="55"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <Space
