@@ -87,15 +87,19 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
 
     private String editNumbers(float number)
     {
+        String newNum = "";
+        newNum = String.valueOf(number);
 
-        if(Float.isNaN(number)) {
-            return ("no solution");
+        while (!newNum.equals("") && Float.valueOf(newNum.substring(1)) == number)
+        {
+            newNum = newNum.substring(1);
         }
+
         if((((float)((int)number)) == (float)number))
         {
             return String.valueOf((int)number);
         }
-        return String.valueOf(number);
+        return newNum;
     }
 
     @Override
