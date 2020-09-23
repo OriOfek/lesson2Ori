@@ -11,16 +11,16 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Switch s;
-    EditText etn;
-    Intent si;
     EditText etd;
+    Intent si;
+    EditText etx1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         s = (Switch) findViewById(R.id.sw);
-        etn = (EditText)findViewById(R.id.etn);
+        etx1 = (EditText)findViewById(R.id.etx1);
         etd = (EditText)findViewById(R.id.etd);
     }
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             si = new Intent(this,results.class);
             si.putExtra("type",s.isChecked());
             si.putExtra("x1",etd.getText().toString());
-            si.putExtra("n",etn.getText().toString());
+            si.putExtra("n",etx1.getText().toString());
             startActivity(si);
         }
         
@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "there is no d",
                     Toast.LENGTH_LONG).show();
         }
-        if(etd.getText().toString().equals("") || etd.getText().toString().equals("-") || etd.getText().toString().equals(".")|| etd.getText().toString().equals("-."))
+        if(etx1.getText().toString().equals("") || etx1.getText().toString().equals("-") || etx1.getText().toString().equals(".")|| etx1.getText().toString().equals("-."))
         {
             flag = false;
-            Toast.makeText(this, "there is no n",
+            Toast.makeText(this, "there is no x1",
                     Toast.LENGTH_LONG).show();
         }
         return flag;

@@ -53,7 +53,7 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
                 }
                 else
                 {
-                    sn[i-1] = Float.parseFloat(arr[i-1]) + Float.parseFloat(arr[i-2]);
+                    sn[i-1] = Float.parseFloat(arr[i-1]) + (sn[i-2]);
                 }
             }
         }
@@ -68,7 +68,7 @@ public class results extends AppCompatActivity implements AdapterView.OnItemClic
                 }
                 else
                 {
-                    sn[i-1] = Float.parseFloat(arr[i-1]) + Float.parseFloat(arr[i-2]);
+                    sn[i-1] = Float.parseFloat(arr[i-1]) + (sn[i-2]);
                 }
 
             }
